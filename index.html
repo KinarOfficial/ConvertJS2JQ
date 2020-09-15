@@ -1,5 +1,32 @@
-<!DOCTYPE HTML>
-<HTML>
-<div id="area" onmouseenter="alertHover();"></div>
-<br><button id="reset" onclick="reset();">Reset</button>
-</HTML>
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="Style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+<script>
+$(document).ready(function(){
+    $("#area").on({
+        mouseenter: function(){
+            alert("Close me to turn the area green");
+            $("#area").css("background-color", "green");
+            
+        },  
+    });
+});
+</script>
+<script>
+    $(document).ready(function(){
+        $("#reset").click(function(){
+            $("#area").css("background-color", "#953674");
+  });
+});
+</script>
+
+</head>
+<body>
+    <div id="area"></div>
+    <br><button id="reset">Reset</button>
+
+</body>
+</html>
